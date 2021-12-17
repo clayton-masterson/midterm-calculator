@@ -1,4 +1,7 @@
 /**
+ * This is the formula itself. Contains the object and methods for converting
+ * String input to doubles as well as the method for performing the
+ * calculation.
  * 
  * @author Clayton Masterson
  * @since 2021-12-06
@@ -76,7 +79,7 @@ public class Formula {
 			solution = Math.pow(this.numA, this.numB);
 			break;
 		case "rt":
-			solution = Math.round(Math.pow(this.numA, (1 / this.numB)));
+			solution = Math.pow(this.numA, (1 / this.numB));
 			break;
 		default:
 			throw new RuntimeException(Pretty.leftSpacer("\n\nI didn't understand that operator\nTell me about it and I'll check it later\n"));
@@ -94,7 +97,8 @@ public class Formula {
 	}
 
 	/**
-	 * Getters and Setters for the Formula object.
+	 * Getters and Setters for the Formula object. The setters for the numbers
+	 * convert them into doubles and stores the original string for the getters
 	 */
 	
 	// Get & Set String numA
@@ -120,7 +124,7 @@ public class Formula {
 		return operator;
 	}
 	public void setOperator(String operator) {
-		this.operator = operator;
+		this.operator = operator.toLowerCase();
 	} 
 
 }

@@ -1,5 +1,5 @@
 /**
- * Strings used for regex pattern matching and 
+ * Strings used for regex pattern matching along with methods for StageControl
  * 
  * @author Clayton Masterson
  * @since 2021-12-06
